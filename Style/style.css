@@ -1,3 +1,13 @@
+@font-face
+{
+    font-family: 'Pirate';
+    src: url('TheRumIsGone.ttf') format('embedded-opentype'), /* Internet Explorer */
+    url('TheRumIsGone.ttf') format('woff2'),             /* Super Modern Browsers */
+    url('TheRumIsGone.ttf') format('woff'),              /* Pretty Modern Browsers */
+    url('TheRumIsGone.ttf') format('truetype'),          /* Safari, Android, iOS */
+    url('TheRumIsGone.ttf') format('svg');               /* Legacy iOS */
+}
+
 body
 {
     margin:40px auto;
@@ -7,10 +17,58 @@ body
 
     background-color: #292929;
     color: white;
-    padding:0 10px
+
+    padding-top: 100%;
 }
 
 h1,h2,h3
 {
     line-height:1.2
+}
+
+nav
+{
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0);
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+@keyframes logo-animation
+{
+    to
+    {
+        max-width: 1rem;
+    }
+}
+
+.logo
+{
+    width: 90vw;
+    margin: auto;
+}
+
+.logo-text
+{
+    margin: auto;
+
+    font-family: Pirate, serif;
+
+    font-size: 2rem;
+
+    text-align: center;
+
+    animation: logo-animation 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+.logo-text :nth-child(2)
+{
+    font-size: 1rem;
 }
