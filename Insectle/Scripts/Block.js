@@ -48,7 +48,11 @@ class Block
 
                 if (key === "Backspace" || key === "Delete")
                 {
-                    if (blocks[k - 1].disabled === true)
+                    if (k === 0)
+                    {
+                        blocks[k].focus();
+                    }
+                    else if (blocks[k - 1].disabled === true)
                     {
                         blocks[k - 2].focus();
                     }
