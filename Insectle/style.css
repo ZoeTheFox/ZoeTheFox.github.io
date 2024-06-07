@@ -1,4 +1,4 @@
-.square-input
+.insectle-letter
 {
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
@@ -11,15 +11,15 @@
     border-radius: 0.4rem;
     margin: 0.2rem;
     text-transform: capitalize;
-    pointer-events: none; /* Make it non-clickable */
+    display: inline-block;
 }
 
-.square-input p {
+.insectle-letter p {
     margin: 0; /* Remove default margin from <p> */
     line-height: 1; /* Adjust line height */
     pointer-events: none; /* Ensure text is not clickable */
 }
 
-.square-input-disabled {
+.insectle-letter-space {
     border: none;
 }
