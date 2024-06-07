@@ -1,6 +1,5 @@
 let moth = new Insect("Fungus Moth");
 
-generatePlay(moth);
 
 function generatePlay(insect)
 {
@@ -12,4 +11,15 @@ function generatePlay(insect)
     {
         mainDiv.append(block)
     }
+}
+
+document.getElementsByTagName("html")[0].addEventListener('keyup', function (event)
+{
+    console.log(event.key);
+    console.log(isValidKey(event.key))
+});
+
+function isValidKey(key) {
+    const alphabet = /^[a-zA-Z]$/;
+    return alphabet.test(key) || key === 'Delete' || key === 'Backspace';
 }

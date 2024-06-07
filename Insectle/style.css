@@ -1,5 +1,7 @@
 .square-input
 {
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
     width: 3rem;
     height: 3rem;
     border: 0.2rem solid green;
@@ -9,10 +11,15 @@
     border-radius: 0.4rem;
     margin: 0.2rem;
     text-transform: capitalize;
+    pointer-events: none; /* Make it non-clickable */
 }
 
+.square-input p {
+    margin: 0; /* Remove default margin from <p> */
+    line-height: 1; /* Adjust line height */
+    pointer-events: none; /* Ensure text is not clickable */
+}
 
-.square-input-disabled
-{
+.square-input-disabled {
     border: none;
 }
