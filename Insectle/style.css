@@ -1,0 +1,16 @@
+.square-input
+{
+    width: 50px;
+    height: 50px;
+    border: 2px solid yellow;
+    font-size: 36px;
+    text-align: center;
+    line-height: 50px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.square-input-disabled
+{
+    border: none;
+}
